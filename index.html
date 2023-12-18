@@ -6,39 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <title>Frontend Watch Collection</title>
+    <title>TomMa Watch Collection</title>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
-    <body style="background-color:#a2a3a6"></body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3">
-        <div class="container">
-            <a href="#" class="navbar-brand">TomMa Watch Collection</a>
+    <body style="background-color: #212529"></body>
 
-            <button 
-                class="navbar-toggler" 
-                type="button" 
-                data-bs-toggle="collapse" 
-                data-bs-target="#navmenu"
-                >
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navmenu">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a href="#collection" class="nav-link">Collection</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#equipment" class="nav-link">Equipment</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#about" class="nav-link">About me</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <!--Navigation bar-->
+    <div id="nav-placeholder">
+    </div>
+    <script>
+    $(function(){
+    $("#nav-placeholder").load("nav.html");
+    });
+    </script>
+    <!--end of Navigation bar-->
 
     <!-- Showcase -->
     <section class="bg-dark text-light p-5 text-center text-sm-start">
@@ -51,7 +33,9 @@
                     <p class="lead my-4">
                         I am a Hobbyist mainly interested in vintage watches from the 40s to end 60s. All my watches have been personally repaired/serviced. Still a lot to learn but happy to share with you my collection and equipment. Feel free to contact me to give any advice or feedback.
                     </p>
-                    <button class="btn btn-primary btn-lg">Find a Randow Watch</button>
+                    <a href="watch_pages/omega_chrono_1944_1946.html">
+                        <button class="btn btn-primary btn-lg"> Find a Randow Watch</button>
+                    </a>
                 </div>
                 <img 
                     class="img-fluid w-100 d-none d-md-block" 
