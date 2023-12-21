@@ -1,19 +1,4 @@
 
-.carousel-item {
-                height:32rem;
-                background: #777;
-                color: white;
-                position: relative;
-            }
-
-.container-sm {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                padding-bottom: 50px;
-            }
-
 .dropdown-submenu {
                 position: relative;
               }
