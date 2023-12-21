@@ -5,6 +5,7 @@
                 color: white;
                 position: relative;
             }
+
 .container-sm {
                 position: absolute;
                 bottom: 0;
@@ -12,16 +13,17 @@
                 right: 0;
                 padding-bottom: 50px;
             }
-            .dropdown-submenu {
+
+.dropdown-submenu {
                 position: relative;
               }
               
-              .dropdown-submenu .dropdown-menu {
+.dropdown-submenu li:hover > ul.dropdown-menu {
                 top: 10%;
                 left: 100%;
                 margin-top: -1px;
               }
               
-              .navbar-nav li:hover > ul.dropdown-menu {
+.navbar-nav li:hover > ul.dropdown-menu {
                   display: block;
               }
