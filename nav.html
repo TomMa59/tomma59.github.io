@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3">
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark py-3 fixed-top">
     <div class="container">
         <a href="#" class="navbar-brand">TomMa Watch Collection</a>
 
@@ -13,14 +13,29 @@
 
         <div class="collapse navbar-collapse" id="navmenu">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a href="#collection" class="nav-link">Collection</a>
+                <li class="nav-item dropdown">
+                    <a href="#" id="menu" data-bs-toggle="dropdown" class="nav-link dropdown-toggle" data-bs-display="static">Collection</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-submenu">
+                            <a href="#" data-bs-toggle="dropdown" class="dropdown-item dropdown-toggle">Omega</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="/watch_pages/omega_chrono_1944_1946.html" class="dropdown-item">Chronograph 1944 1946</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-item">Incoming</a>
+                        </li>
+                    </ul>
                 </li>
                 <li class="nav-item">
-                    <a href="#equipment" class="nav-link">Equipment</a>
+                    <a class="nav-link" href="#">Equipment</a>
                 </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About me</a>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">About me</a>
                 </li>
             </ul>
         </div>

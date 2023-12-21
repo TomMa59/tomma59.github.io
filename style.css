@@ -1,14 +1,27 @@
 
-     .carousel-item {
+.carousel-item {
                 height:32rem;
                 background: #777;
                 color: white;
                 position: relative;
             }
-            .container-sm {
+.container-sm {
                 position: absolute;
                 bottom: 0;
                 left: 0;
                 right: 0;
                 padding-bottom: 50px;
             }
+            .dropdown-submenu {
+                position: relative;
+              }
+              
+              .dropdown-submenu .dropdown-menu {
+                top: 10%;
+                left: 100%;
+                margin-top: -1px;
+              }
+              
+              .navbar-nav li:hover > ul.dropdown-menu {
+                  display: block;
+              }
