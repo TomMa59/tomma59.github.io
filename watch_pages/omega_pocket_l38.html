@@ -7,8 +7,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <title>Breitling Cadette 1940-1950</title>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <style>
         body {
             background-color: #212529;
@@ -18,16 +18,26 @@
 
 <body> 
 
-    <!-- Navigation bar -->
+    <!--Navigation bar-->
     <div id="nav-placeholder"></div>
     <script>
     $(function(){
-        $("#nav-placeholder").load("/nav.html").fail(function() {
-            $("#nav-placeholder").html("<p>Navigation could not be loaded.</p>");
+        $("#nav-placeholder").load("/nav.html", function(){
+            // Custom JavaScript for dropdown after nav is loaded
+            document.querySelectorAll('.dropdown-submenu .dropdown-toggle').forEach(function(element){
+                element.addEventListener('click', function(e){
+                    let nextEl = element.nextElementSibling;
+                    if(nextEl && nextEl.classList.contains('dropdown-menu')){
+                        nextEl.classList.toggle('show');
+                        e.preventDefault();
+                        e.stopPropagation();
+                    }
+                });
+            });
         });
     });
     </script>
-    <!-- End of Navigation bar -->
+    <!--End of Navigation bar-->
 
     <!-- Main content -->
     <section class="bg-dark text-light p-5 text-left text-sm-start">

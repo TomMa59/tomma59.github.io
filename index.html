@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
     <title>TomMa Watch Collection</title>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body style="background-color: #212529">
 
@@ -16,7 +16,19 @@
     <div id="nav-placeholder"></div>
     <script>
     $(function(){
-        $("#nav-placeholder").load("/nav.html");
+        $("#nav-placeholder").load("/nav.html", function(){
+            // Custom JavaScript for dropdown after nav is loaded
+            document.querySelectorAll('.dropdown-submenu .dropdown-toggle').forEach(function(element){
+                element.addEventListener('click', function(e){
+                    let nextEl = element.nextElementSibling;
+                    if(nextEl && nextEl.classList.contains('dropdown-menu')){
+                        nextEl.classList.toggle('show');
+                        e.preventDefault();
+                        e.stopPropagation();
+                    }
+                });
+            });
+        });
     });
     </script>
     <!--End of Navigation bar-->
